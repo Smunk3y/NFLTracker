@@ -1,15 +1,3 @@
-// Function to format date and time
-function formatDateTime(dateTimeString) {
-    const eventDate = new Date(dateTimeString);
-    const year = eventDate.getFullYear();
-    const month = String(eventDate.getMonth() + 1).padStart(2, '0'); // Month is zero-based
-    const day = String(eventDate.getDate()).padStart(2, '0');
-    const hours = String(eventDate.getHours()).padStart(2, '0');
-    const minutes = String(eventDate.getMinutes()).padStart(2, '0');
-
-    return `${year}/${month}/${day} @ ${hours}:${minutes}`;
-}
-
 // Function to fetch and display team information
 async function displayTeamInfo() {
     const teamInfoDiv = document.getElementById('team-info');
@@ -42,22 +30,23 @@ async function displayTeamInfo() {
         const teamRecord = document.createElement('p');
         teamRecord.textContent = `Record: ${team.record.items[0].summary}`;
 
-        const nextEventInfo = document.createElement('p');
-        const formattedDateTime = formatDateTime(nextEvent.date);
-        nextEventInfo.textContent = `Next Event: ${formattedDateTime}`;
-
-   
-            const gameLocation = document.createElement('p');
-            gameLocation.textContent = `Game Location: ${nextEvent.venue.fullName}`; // Display game location
-            teamInfoDiv.appendChild(gameLocation);
+        const nextGameInfo = document.createElement('p');
+        const formattedDateTime = new Date(nextEvent.date).toLocaleString();
         
+        // Check if venue information is available in the "tickets" section
+        if (nextEvent.tickets && nextEvent.tickets[0] && nextEvent.tickets[0].venue && nextEvent.tickets[0].venue.fullName) {
+            const gameVenue = nextEvent.tickets[0].venue.fullName;
+            nextGameInfo.textContent = `Next Game: ${formattedDateTime} @ ${gameVenue}`;
+        } else {
+            nextGameInfo.textContent = `Next Game: ${formattedDateTime}`;
+        }
 
         // Append elements to the teamInfoDiv
         teamInfoDiv.innerHTML = ''; // Clear previous content
         teamInfoDiv.appendChild(teamNameHeading);
         teamInfoDiv.appendChild(teamLocation);
         teamInfoDiv.appendChild(teamRecord);
-        teamInfoDiv.appendChild(nextEventInfo);
+        teamInfoDiv.appendChild(nextGameInfo);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
