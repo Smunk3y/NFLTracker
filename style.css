@@ -1,0 +1,587 @@
+.gsgsgsP{
+
+}
+
+body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+    background: url(https://i.imgur.com/L7Jku5z.jpeg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+.bg:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+@keyframes sf-fly-by-1 {
+    from {
+        transform: translateZ(-800px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(0);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-2 {
+    from {
+        transform: translateZ(-1600px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-800px);
+        opacity: 0.5;
+    }
+}
+@keyframes sf-fly-by-3 {
+    from {
+        transform: translateZ(-2400px);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateZ(-1600px);
+        opacity: 0.5;
+    }
+}
+.star-field {
+     /* position: fixed;  Removed cause it blocks scrolling  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+    -webkit-perspective: 800px;
+    /* z-index: -1 !important; */
+}
+.star-field .layer {
+    box-shadow: -411px -476px #cccccc, 777px -407px #d4d4d4, -387px -477px #fcfcfc, -91px -235px #d4d4d4, 491px -460px #f7f7f7, 892px -128px #f7f7f7, 758px -277px #ededed, 596px 378px #cccccc, 647px 423px whitesmoke, 183px 389px #c7c7c7,
+        524px -237px #f0f0f0, 679px -535px #e3e3e3, 158px 399px #ededed, 157px 249px #ededed, 81px -450px #ebebeb, 719px -360px #c2c2c2, -499px 473px #e8e8e8, -158px -349px #d4d4d4, 870px -134px #cfcfcf, 446px 404px #c2c2c2,
+        440px 490px #d4d4d4, 414px 507px #e6e6e6, -12px 246px #fcfcfc, -384px 369px #e3e3e3, 641px -413px #fcfcfc, 822px 516px #dbdbdb, 449px 132px #c2c2c2, 727px 146px #f7f7f7, -315px -488px #e6e6e6, 952px -70px #e3e3e3,
+        -869px -29px #dbdbdb, 502px 80px #dedede, 764px 342px #e0e0e0, -150px -380px #dbdbdb, 654px -426px #e3e3e3, -325px -263px #c2c2c2, 755px -447px #c7c7c7, 729px -177px #c2c2c2, -682px -391px #e6e6e6, 554px -176px #ededed,
+        -85px -428px #d9d9d9, 714px 55px #e8e8e8, 359px -285px #cfcfcf, -362px -508px #dedede, 468px -265px #fcfcfc, 74px -500px #c7c7c7, -514px 383px #dbdbdb, 730px -92px #cfcfcf, -112px 287px #c9c9c9, -853px 79px #d6d6d6,
+        828px 475px #d6d6d6, -681px 13px #fafafa, -176px 209px #f0f0f0, 758px 457px #fafafa, -383px -454px #ededed, 813px 179px #d1d1d1, 608px 98px whitesmoke, -860px -65px #c4c4c4, -572px 272px #f7f7f7, 459px 533px #fcfcfc,
+        624px -481px #e6e6e6, 790px 477px #dedede, 731px -403px #ededed, 70px -534px #cccccc, -23px 510px #cfcfcf, -652px -237px whitesmoke, -690px 367px #d1d1d1, 810px 536px #d1d1d1, 774px 293px #c9c9c9, -362px 97px #c2c2c2,
+        563px 47px #dedede, 313px 475px #e0e0e0, 839px -491px #e3e3e3, -217px 377px #d4d4d4, -581px 239px #c2c2c2, -857px 72px #cccccc, -23px 340px #dedede, -837px 246px white, 170px -502px #cfcfcf, 822px -443px #e0e0e0, 795px 497px #e0e0e0,
+        -814px -337px #cfcfcf, 206px -339px #f2f2f2, -779px 108px #e6e6e6, 808px 2px #d4d4d4, 665px 41px #d4d4d4, -564px 64px #cccccc, -380px 74px #cfcfcf, -369px -60px #f7f7f7, 47px -495px #e3e3e3, -383px 368px #f7f7f7, 419px 288px #d1d1d1,
+        -598px -50px #c2c2c2, -833px 187px #c4c4c4, 378px 325px whitesmoke, -703px 375px #d6d6d6, 392px 520px #d9d9d9, -492px -60px #c4c4c4, 759px 288px #ebebeb, 98px -412px #c4c4c4, -911px -277px #c9c9c9;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 4px;
+    border-radius: 2px;
+}
+.star-field .layer:nth-child(1) {
+    animation: sf-fly-by-1 6s linear infinite;
+    animation-direction: alternate;
+}
+.star-field .layer:nth-child(2) {
+    animation: sf-fly-by-2 10s linear infinite;
+    animation-direction: alternate;
+}
+.star-field .layer:nth-child(3) {
+    animation: sf-fly-by-3 8s linear infinite;
+    animation-direction: alternate;
+}
+
+@font-face {
+  font-family: blond;
+  src:url(Blonde.ttf);
+}
+
+@font-face {
+  font-family: Numba;
+  src:url(Numba.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src:url(Tracklist.ttf);
+}
+
+@font-face {
+  font-family: NavBar;
+  src:url(Koulen.ttf);
+}
+
+
+
+
+.blondfont{
+  font-family: blond;
+}
+
+
+/* Removes Scrollbar! */
+
+
+#pageheader{
+
+}
+
+#pageheadertxt{
+  font-family: 'Lato', sans-serif !important;
+  font-size: 60px;
+  text-align: center !important;
+}
+
+.navbarbutton{
+  font-family: 'NavBar', sans-serif !important;
+  font-size: 30px;
+  color:white;
+}
+
+.exespage{
+  font-family: 'Numba', sans-serif !important;
+  text-align: center;
+}
+
+
+
+.font1{
+  font-family: monospace;
+}
+
+.font2{
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+.font3{
+  font-family: 'Times New Roman', serif;
+}
+
+.smlwhitebdr{
+  border-style: dashed;
+  border-radius: 12px;
+}
+
+.backgroundblur{
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+.textiswideyo{
+  font-stretch: ultra-expanded !important;
+}
+
+
+.longtrklist{
+ font-size: 18px;
+}
+
+.shorttrklist{
+ font-size: 24px;
+}
+
+.medtrklist{
+ font-size: 21.5px;
+}
+
+.medshorttrklist{
+ font-size: 22.5px;
+}
+
+.medlongtrklist{
+ font-size: 20px;
+}
+
+.veryoverthetopsizefnt{
+  font-size: 120px;
+  font-family: monospace;
+}
+
+.buionbg{
+  height: 300px;
+}
+.formiframe{
+  min-height: 800px;
+  max-height: 1100px;
+}
+
+.fontsz1{
+ font-size: 18px;
+}
+
+
+.fontsz2{
+ font-size: 34px;
+}
+
+.fontsz3{
+ font-size: 24px;
+}
+
+.fontsz4{
+ font-size: 27px;
+}
+
+.fontsz5{
+ font-size: 33px;
+}
+
+.fontsz6{
+ font-size: 30px;
+}
+
+.fontsz7{
+ font-size: 16px;
+}
+
+.fontsz8{
+ font-size: 22px;
+}
+
+
+.fontsz9{
+ font-size: 16px;
+}
+
+.fontsz10{
+ font-size: 20px;
+}
+
+.fontsz11{
+ font-size: 25px;
+}
+
+.fontsz12{
+ font-size: 13px;
+}
+
+.fontsz14{
+ font-size: 10px;
+}
+
+.fontsz13{
+ font-size: 60px;
+}
+
+.fontsz15{
+ font-size: 15px;
+}
+
+.artistname{
+ font-size: 48px !important;
+}
+
+.undaline:hover{
+  text-decoration: underline !important;
+}
+
+
+.artistpropic{
+  width: 170px !important;
+  height: 170px !important;
+  border-radius: 35px;
+  transition: border-radius 1s ease-out 100ms;
+  object-fit:cover;
+}
+
+.crop{
+  object-fit:cover;
+}
+
+.artistpropic:hover{
+  border-radius: 5px;
+  transition: border-radius 1s ease-out 100ms
+}
+
+.albumcover{
+  width: 225px !important;
+  height: 225px !important;
+}
+
+.bigalbumcover{
+   /* width: 390px !important;
+   height: 390px !important; */
+   width: 100%;
+   height: 100%;
+   margin-bottom: 15px;
+}
+
+.aas{
+  text-align: center !important;
+}
+
+!centa{
+  text-align: center !important;
+}
+
+.upalbums{
+  font-size: 28px;
+}
+
+.upap{
+  font-size: 31px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+ }
+
+.dropdowntext{
+  color: white !important;
+  font-family: monospace !important;
+}
+
+.dropdowntext:hover{
+ background-color:rgba(255, 255, 255, 0.25) !important;
+}
+
+.color1{
+  color:#BA1200;
+}
+
+.color2{
+  color:#031927;
+}
+
+.color3{
+  color:#9DD1F1;
+}
+
+.color4{
+  color:#508AA8;
+}
+
+.color5{
+  color:#C8E0F4;
+}
+
+.color6{
+  color:white;
+}
+
+.centerit{
+  text-align: center;
+}
+
+.vinylimg{
+  width: 475px;
+}
+
+a{
+  color:white !important;
+}
+
+.color1background{
+  backgrond-color:#BA1200;
+}
+
+.color2background{
+  background-color:#031927;
+}
+
+.color3background{
+  background-color:#9DD1F1;
+}
+
+.color4background{
+  background-color:#508AA8;
+}
+
+.color5background{
+  background-color:#C8E0F4;
+}
+
+.phototoo{
+  width: 660px !important;
+  height: 500px !important;
+  text-align: center !important;
+}
+
+
+
+.activenavbutton{
+  color:#FAF9F6 !important;
+  pointer-events: none !important;
+  text-decoration: dashed underline;
+}
+
+.numbafont{
+font-family: 'Numba', sans-serif;
+font-size: 36px;
+  display: block;
+}
+
+.tracklist-font{
+font-family: 'Lato', sans-serif;
+}
+
+.artistdesc{
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.numbasquare{
+  width: 15%;
+  height: 57px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.numbasquare2{
+  width: 150px;
+  height: 57px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.numbasquare3{
+  width: 110px;
+  height: 40px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 1px !important;
+}
+
+.numbafontsingle{
+font-family: 'Numba', sans-serif;
+font-size: 24px;
+  display: block;
+}
+
+
+.topsongssquare{
+  width: 25%;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: block;
+  float: right;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.songthingbob{
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  margin-right: 20px;
+}
+
+.numbasquare5{
+  width: 150px;
+  height: 57px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.testimagebeb{
+  width: 60%;
+  height: 60%;
+}
+
+.somespaceuotop{
+  margin-top: 6px;
+
+}
+
+.leftbaby{
+  float: left;
+}
+
+.linethrough{
+  text-decoration: line-through !important;
+}
+
+.bestnewmusic {
+  color: red!important;
+  border-color: red!important;
+  text-decoration: none !important;
+  text-decoration-color: red !important;
+}
+
+.downloadicon{
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.imageovercont {
+  position: relative;
+}
+
+.Imageoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #000000;
+  border-radius: 15px;
+}
+
+.imageovercont:hover .Imageoverlay {
+  opacity: 0.7;
+}
+
+.Roundedges{
+  border-radius: 15px;
+}
+
+.videotopright{
+  float: right;
+}
+
+.videotopleft{
+  display: block;
+  float: left;
+}
