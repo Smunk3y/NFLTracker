@@ -2,6 +2,8 @@
 async function displayTeamInfo() {
     const teamInfoDiv = document.getElementById('team-info');
     const staticValueDiv = document.getElementById('static-value');
+    const teamLogoImg = document.getElementById('team-logo'); // Get the <img> element
+
     const selectedTeamAbbreviation = staticValueDiv.textContent.trim();
 
     try {
@@ -19,6 +21,7 @@ async function displayTeamInfo() {
         // Extract relevant information
         const team = data.team;
         const nextEvent = team.nextEvent[0]; // Access the first element in the array
+        const opponentShortName = nextEvent.shortName;
 
         // Create elements to display team information
         const teamNameHeading = document.createElement('h1');
@@ -28,25 +31,31 @@ async function displayTeamInfo() {
         teamLocation.textContent = `Location: ${team.location}`;
 
         const teamRecord = document.createElement('p');
-        teamRecord.textContent = `Record: ${team.record.items[0].summary}`;
+        teamRecord.textContent = `Record: ${team.record.items[0].summary} - ${team.standingSummary}`;
 
-        const nextGameInfo = document.createElement('p');
+        const thisWeeksGameInfo = document.createElement('p');
         const formattedDateTime = new Date(nextEvent.date).toLocaleString();
-        
-        // Check if venue information is available in the "tickets" section
-        if (nextEvent.tickets && nextEvent.tickets[0] && nextEvent.tickets[0].venue && nextEvent.tickets[0].venue.fullName) {
-            const gameVenue = nextEvent.tickets[0].venue.fullName;
-            nextGameInfo.textContent = `Next Game: ${formattedDateTime} @ ${gameVenue}`;
-        } else {
-            nextGameInfo.textContent = `Next Game: ${formattedDateTime}`;
-        }
+        thisWeeksGameInfo.textContent = `This week's game: ${formattedDateTime}`;
+
+         teamLogoImg.src = team.logos[0].href;
+
+        // Create a separate section for opponent and stadium
+        const opponentStadiumDiv = document.createElement('div');
+        opponentStadiumDiv.id = 'opponent-stadium';
+
+        const opponentInfo = document.createElement('p');
+        opponentInfo.textContent = `Opponent: ${opponentShortName}`;
+
+        // Append opponentInfo to opponentStadiumDiv
+        opponentStadiumDiv.appendChild(opponentInfo);
 
         // Append elements to the teamInfoDiv
         teamInfoDiv.innerHTML = ''; // Clear previous content
         teamInfoDiv.appendChild(teamNameHeading);
         teamInfoDiv.appendChild(teamLocation);
         teamInfoDiv.appendChild(teamRecord);
-        teamInfoDiv.appendChild(nextGameInfo);
+        teamInfoDiv.appendChild(thisWeeksGameInfo);
+        teamInfoDiv.appendChild(opponentStadiumDiv);
     } catch (error) {
         console.error('Error fetching data:', error);
     }
