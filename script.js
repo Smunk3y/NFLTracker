@@ -2,12 +2,11 @@
 async function displayTeamInfo() {
     const teamInfoDiv = document.getElementById('team-info');
     const staticValueDiv = document.getElementById('static-value');
-    const teamLogoImg = document.getElementById('team-logo'); // Get the <img> element
+    const teamLogoImg = document.getElementById('team-logo'); // link to html img
 
     const selectedTeamAbbreviation = staticValueDiv.textContent.trim();
 
     try {
-        // Construct the API URL based on the selected team abbreviation
         const apiUrl = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${selectedTeamAbbreviation}`;
 
         // Fetch data from the API
