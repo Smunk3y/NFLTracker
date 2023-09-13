@@ -1,14 +1,17 @@
 async function displayTeamInfo() {
+  //For each html div / p
   const teamNameDiv = document.getElementById('team-name');
   const teamLocationDiv = document.getElementById('team-location');
   const teamRecordDiv = document.getElementById('team-record');
   const thisWeeksGameDiv = document.getElementById('this-weeks-game');
   const teamLogoImg = document.getElementById('team-logo');
 
+
   const staticValueDiv = document.getElementById('static-value');
   const selectedTeamAbbreviation = staticValueDiv.textContent.trim();
 
   try {
+    //Get data from 
     const apiUrl = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/${selectedTeamAbbreviation}`;
 
     const response = await fetch(apiUrl);
@@ -27,7 +30,7 @@ async function displayTeamInfo() {
     teamRecordDiv.textContent = `Record: ${team.record.items[0].summary} - ${team.standingSummary}`;
 
     const formattedDateTime = new Date(nextEvent.date).toLocaleString();
-    thisWeeksGameDiv.textContent = `This week's game: ${formattedDateTime}`;
+    thisWeeksGameDiv.textContent = `This week's game: ${formattedDateTime} - ${opponentShortName}`;
 
     teamLogoImg.src = team.logos[0].href;
   } catch (error) {
