@@ -13,8 +13,6 @@ async function displayTeamInfo() {
   const gamesPlayedDiv = document.getElementById('games-played');
   const winstreakDiv = document.getElementById('win-streak');
 
-  const rosterLinkContainer = document.getElementById('roster-link-container');
-
 
   const staticValueDiv = document.getElementById('static-value');
   const selectedTeamAbbreviation = staticValueDiv.textContent.trim();
@@ -52,17 +50,18 @@ async function displayTeamInfo() {
     pointsAgainstDiv.textContent = `Avg Points Against: ${team.record.items[0].stats.find(stat => stat.name === 'avgPointsAgainst').value}`;
     pointsDifDiv.textContent =  `Point Differential: ${team.record.items[0].stats.find(stat => stat.name === 'differential').value}`;
     winPercentDiv.textContent =  `Win Percentage: ${team.record.items[0].stats.find(stat => stat.name === 'winPercent').value* 100}%`;
-    winstreakDiv.textContent =  `Win Streak: ${team.record.items[0].stats.find(stat => stat.name === 'streak').value}`;
+    winstreakDiv.textContent =  `Win/Loss Streak: ${team.record.items[0].stats.find(stat => stat.name === 'streak').value}`;
     gamesPlayedDiv.textContent =  `Games Played: ${team.record.items[0].stats.find(stat => stat.name === 'gamesPlayed').value} / 17`;
 
 
-    //for roster link 
+    //for roster link
     if (rosterLink) {
     // Create an <a> element
     const rosterLinkElement = document.createElement('a');
 
     // Set the href attribute and text content
     rosterLinkElement.href = rosterLink.href;
+    rosterLinkElement.target ='_blank';  //open in new tab
     rosterLinkElement.textContent = 'Roster'; // You can customize the link text
 
     // Append the <a> element to a container div on your webpage
@@ -76,6 +75,7 @@ async function displayTeamInfo() {
 
   // Set the href attribute and text content
   statsLinkElement.href = statsLink.href;
+  statsLinkElement.target ='_blank'; //open in new tab
   statsLinkElement.textContent = 'Statistics'; // You can customize the link text
 
   // Append the <a> element to a container div on your webpage

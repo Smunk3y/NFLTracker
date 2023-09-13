@@ -289,20 +289,14 @@ body {
 
 
 .artistpropic{
-  width: 170px !important;
-  height: 170px !important;
+  width: 500px !important;
+  height: 500px !important;
   border-radius: 35px;
-  transition: border-radius 1s ease-out 100ms;
   object-fit:cover;
 }
 
 .crop{
   object-fit:cover;
-}
-
-.artistpropic:hover{
-  border-radius: 5px;
-  transition: border-radius 1s ease-out 100ms
 }
 
 .albumcover{

@@ -218,7 +218,7 @@ class Header extends HTMLElement {
 
       .navbarbutton{
         font-family: 'NavBar', sans-serif !important;
-        font-size: 36px;
+        font-size: 26px;
 
         color:white !important;
       }
@@ -236,15 +236,15 @@ class Header extends HTMLElement {
       }
 
       .imgthingleft{
-        height: 45%;
-        width: 45%;
+        height: 50%;
+        width: 50%;
         text-align: center;
         float: right;
       }
 
       .imgthingright{
-        height: 45%;
-        width: 45%;
+        height: 50%;
+        width: 50%;
         text-align: center;
         float: right;
       }
@@ -260,10 +260,10 @@ class Header extends HTMLElement {
                        AFC North ▼
                    </a>
                    <ul class="dropdown-menu backgroundblur">
-                        <a href="AFC/North/Pit.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh"></li></a>
-                        <a href="AFC/North/Cle.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland" ></li></a>
-                        <a href="AFC/North/Bal.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore" ></li></a>
-                        <a href="AFC/North/Cin.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinatti" ></li></a>
+                        <a href="../../AFC/North/pit.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh"></li></a>
+                        <a href="../../AFC/North/cle.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland" ></li></a>
+                        <a href="../../AFC/North/bal.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore" ></li></a>
+                        <a href="../../AFC/North/cin.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinatti" ></li></a>
                    </ul>
                </span>
           <span class="navbardivider">|</span>
@@ -272,12 +272,87 @@ class Header extends HTMLElement {
                          AFC East ▼
                      </a>
                      <ul class="dropdown-menu backgroundblur">
-                         <li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh" href="AFC/North/pit.html"></li>
-                         <li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland" href="AFC/North/cle.html"></li>
-                         <li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore" href="AFC/North/bal.html"></li>
-                         <li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinatti" href="AFC/North/cin.html"></li>
+                     <a href="../../AFC/East/buf.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo"></li></a>
+                     <a href="../../AFC/East/nyj.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png" alt="New-York-Jets" ></li></a>
+                     <a href="../../AFC/East/ne.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="Patriots" ></li></a>
+                     <a href="../../AFC/East/mia.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="Miami" ></li></a>
                      </ul>
                  </span>
+                 <span class="navbardivider">|</span>
+                 <span class="dropdown">
+                            <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                AFC South ▼
+                            </a>
+                            <ul class="dropdown-menu backgroundblur">
+                                 <a href="../../AFC/South/hou.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/hou.png" alt="Houston"></li></a>
+                                 <a href="../../AFC/South/jax.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/jax.png" alt="Jaxonville" ></li></a>
+                                 <a href="../../AFC/South/ind.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/ind.png" alt="Indianapolis" ></li></a>
+                                 <a href="../../AFC/South/ten.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/ten.png" alt="Tenessee" ></li></a>
+                            </ul>
+                        </span>
+                   <span class="navbardivider">|</span>
+                   <span class="dropdown">
+                              <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                  AFC West ▼
+                              </a>
+                              <ul class="dropdown-menu backgroundblur">
+                              <a href="../../AFC/West/kc.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" alt="Kansas City"></li></a>
+                              <a href="../../AFC/West/lv.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/lv.png" alt="Las Vegas" ></li></a>
+                              <a href="../../AFC/West/den.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/den.png" alt="Denver" ></li></a>
+                              <a href="../../AFC/West/lac.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="LA Chargers" ></li></a>
+                              </ul>
+                          </span>
+
+
+                          <span class="navbardivider">|</span>
+                          <span class="dropdown">
+                                     <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                         NFC North ▼
+                                     </a>
+                                     <ul class="dropdown-menu backgroundblur">
+                                          <a href="../../NFC/North/det.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" alt="dettsburgh"></li></a>
+                                          <a href="../../NFC/North/gb.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/gb.png" alt="Cleveland" ></li></a>
+                                          <a href="../../NFC/North/chi.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" alt="Baltimore" ></li></a>
+                                          <a href="../../NFC/North/min.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/min.png" alt="Cincinatti" ></li></a>
+                                     </ul>
+                                 </span>
+                            <span class="navbardivider">|</span>
+                            <span class="dropdown">
+                                       <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                           NFC East ▼
+                                       </a>
+                                       <ul class="dropdown-menu backgroundblur">
+                                       <a href="../../NFC/East/phi.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philly"></li></a>
+                                       <a href="../../NFC/East/dal.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dalas" ></li></a>
+                                       <a href="../../NFC/East/nyg.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="NYG" ></li></a>
+                                       <a href="../../NFC/East/wsh.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png" alt="Washington" ></li></a>
+                                       </ul>
+                                   </span>
+                                   <span class="navbardivider">|</span>
+                                   <span class="dropdown">
+                                              <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                                  NFC South ▼
+                                              </a>
+                                              <ul class="dropdown-menu backgroundblur">
+                                                   <a href="../../NFC/South/no.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" alt="New Orleans"></li></a>
+                                                   <a href="../../NFC/South/tb.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" alt="Tampa" ></li></a>
+                                                   <a href="../../NFC/South/atl.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Atlanta" ></li></a>
+                                                   <a href="../../NFC/South/car.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/car.png" alt="Carolina" ></li></a>
+                                              </ul>
+                                          </span>
+                                     <span class="navbardivider">|</span>
+                                     <span class="dropdown">
+                                                <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                                                    NFC West ▼
+                                                </a>
+                                                <ul class="dropdown-menu backgroundblur">
+                                                <a href="../../NFC/West/sea.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="Seatle"></li></a>
+                                                <a href="../../NFC/West/sf.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Fran" ></li></a>
+                                                <a href="../../NFC/West/ari.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" alt="Arizona" ></li></a>
+                                                <a href="../../NFC/West/lar.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="LA Rams" ></li></a>
+                                                </ul>
+                                            </span>
+
 
         </div>
         </nav>
