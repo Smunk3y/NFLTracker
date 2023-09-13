@@ -235,32 +235,49 @@ class Header extends HTMLElement {
         color:white !important;
       }
 
+      .imgthingleft{
+        height: 45%;
+        width: 45%;
+        text-align: center;
+        float: right;
+      }
+
+      .imgthingright{
+        height: 45%;
+        width: 45%;
+        text-align: center;
+        float: right;
+      }
+
 
       </style>
       <header>
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-md text-center">
-
         <span class="dropdown">
                    <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
-                       AFC ▼
+                       AFC North ▼
                    </a>
                    <ul class="dropdown-menu backgroundblur">
-                       <li><a class="dropdowntext"  href="AltNRock/029/Alt029.html">0-9</a></li>
-                       <li><a class="dropdowntext"  href="AltNRock/A2F/AltA2F.html">A-F</a></li>
-                       <li><a class="dropdowntext"  href="AltNRock/G2K/AltG2K.html">G-K</a></li>
-                       <li><a class="dropdowntext"  href="AltNRock/L2P/AltL2P.html">L-P</a></li>
-                       <li><a class="dropdowntext"  href="AltNRock/Q2U/AltQ2U.html">Q-U</a></li>
-                       <li><a class="dropdowntext"  href="AltNRock/V2Z/AltV2Z.html">V-Z</a></li>
+                        <a href="AFC/North/Pit.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh"></li></a>
+                        <a href="AFC/North/Cle.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland" ></li></a>
+                        <a href="AFC/North/Bal.html"><li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore" ></li></a>
+                        <a href="AFC/North/Cin.html"><li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinatti" ></li></a>
                    </ul>
                </span>
           <span class="navbardivider">|</span>
-          <a class="navbarbutton" href="music.html">Music</a>
-          <span class="navbardivider">|</span>
-          <a class="navbarbutton" href="feature.html">Feature's</a>
-          <span class="navbardivider">|</span>
-          <a class="navbarbutton" href="download.html">Downloads</a>
+          <span class="dropdown">
+                     <a class="dropdown-toggle navbarbutton " data-toggle="dropdown" href="">
+                         AFC East ▼
+                     </a>
+                     <ul class="dropdown-menu backgroundblur">
+                         <li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh" href="AFC/North/pit.html"></li>
+                         <li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland" href="AFC/North/cle.html"></li>
+                         <li><img class="imgthingleft" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore" href="AFC/North/bal.html"></li>
+                         <li><img class="imgthingright" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinatti" href="AFC/North/cin.html"></li>
+                     </ul>
+                 </span>
 
         </div>
         </nav>
