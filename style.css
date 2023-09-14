@@ -579,3 +579,46 @@ font-size: 24px;
   display: block;
   float: left;
 }
+
+.popup{
+    background-color: #ffffff;
+    width:75%;
+    padding: 0px 50px 50px 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    display: none;
+    text-align: center;
+}
+
+.popupimg{
+  width: 100%;
+  z-index: 15 !important;
+  position: relative;
+}
+
+.hidebehind{
+  z-index: -1;
+}
+
+.popup button{
+    display: block;
+    float: right;
+ margin-top: 10px;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 20px;
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 25px;
